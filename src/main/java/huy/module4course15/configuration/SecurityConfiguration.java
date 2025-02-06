@@ -63,6 +63,7 @@ public class SecurityConfiguration {
                         auth -> auth
                                 .requestMatchers(HttpMethod.OPTIONS,"/**").permitAll()
                                 .requestMatchers("/api/login").permitAll()
+                                .requestMatchers("/api/register").permitAll()
                                 .requestMatchers("/product").authenticated()
                 )
                 .build();
